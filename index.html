@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>IDG ANALYSES TEXT</title>
+      <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+
+
+    <div class="container">
+
+      <div class="row">
+        <h1>Analyzer</h1>
+        <textarea placeholder="Enter your text here..."></textarea>
+      </div>
+
+      <div class="row">
+        <div>All Characters incluided spaces: <span id="character-count">0</span></div>
+        <div>2 seconds without input: <span id="2-sec-no-input">0</span></div>
+      </div>
+
+      <div class="row">
+        <div>Spaces: <span id="spaces-count">0</span></div>
+        <div>Full Stops: <span id="dots-count">0</span></div>
+      </div>
+
+      <div class="row">
+        <div>Numbers of Words and Matches: <span id="word-count">0</span></div>
+      </div>
+
+      <div class="row">
+        <button type="button">Get Entities</button>
+        <div id="results"></div>
+      </div>
+
+    </div>
+
+      <!--/ DEV SCRIPTS -->
+      <script src="js/analysesText.js"></script>
+
+  </body>
+  
+</html>
