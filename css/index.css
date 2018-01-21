@@ -1,0 +1,128 @@
+
+/* border box and body*/
+html,body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+  background-color: #2F3490;
+}
+
+/*Container Style*/
+.container{
+  margin: auto;
+  background: radial-gradient(circle, #ff0000, #ffff00, #008000);
+  padding: 5px 5px 5px 5px;
+  height: 95%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .row:nth-child(1) > textarea,
+.container .row,
+.container button:first-child{
+  height: 200px;
+  background-color: #fff;
+  font-family: Tahoma, sans-serif;
+}
+
+.container h1{
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+
+/*For rows*/
+.container .row{
+  height: auto;
+  overflow-wrap: break-word;
+  overflow-y:auto;
+  border: 3px solid cadetblue;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px 5px 5px;
+}
+
+/*Scroller if needed */
+.row::-webkit-scrollbar {
+    width: 1em;
+}
+
+.row::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.row::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+/*different rows*/
+.container .row:nth-child(2){
+  background-color: #e5e5e5;
+}
+.container .row:nth-child(3){
+  background-color: #cccccc;
+}
+.container .row:nth-child(4){
+  background-color: #b2b2b2;
+}
+
+/*button*/
+ .container button:first-child{
+    height: 70px;
+    background-color: white;
+    border: 2px solid #e7e7e7;
+    cursor: pointer;
+}
+
+.container button:first-child:hover {
+  background-color: #e7e7e7;
+}
+
+/*for tablets*/
+@media screen and (min-width: 768px) {
+
+  .container .row:nth-child(1) > textarea{
+    border: 3px solid rgb(169, 169, 169);
+  }
+
+  .container .row:nth-child(2),
+  .container .row:nth-child(3),
+  .container .row:nth-child(4){
+    height: 15%;
+    font-size: 2rem;
+  }
+
+  .container h1{
+    3rem;
+  }
+  .container button:first-child{
+    font-size: 1.5rem;
+  }
+}
+
+/*for the rest of screens*/
+@media screen and (min-width: 992px) {
+
+  .container{
+    height: 80%;
+    width: 60%;
+  }
+
+}
